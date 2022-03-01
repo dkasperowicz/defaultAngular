@@ -1,7 +1,7 @@
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { TranslateLoader, TranslateModule, TranslateService } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } from "ngx-translate-cache";
+import { /* TranslateCacheModule, */ TranslateCacheSettings, TranslateCacheService } from "ngx-translate-cache";
 import { NgModule } from '@angular/core';
 
 @NgModule(
@@ -17,7 +17,7 @@ import { NgModule } from '@angular/core';
 				useFactory: translateLoaderFactory,
 				deps: [HttpClient]
 			}
-		}),
+		})/*,
 		TranslateCacheModule.forRoot(
 		{
 			cacheService:
@@ -27,19 +27,19 @@ import { NgModule } from '@angular/core';
 				deps: [TranslateService, TranslateCacheSettings]
 			},
 			cacheMechanism: "LocalStorage"
-		})
+		})*/
 	],
 	exports: [TranslateModule]
 })
 
 export class I18nModule
 {
-	constructor(translate: TranslateService, translateCacheService: TranslateCacheService)
+	constructor(translate: TranslateService, /* translateCacheService: TranslateCacheService */)
 	{
-		translateCacheService.init();
+		//translateCacheService.init();
 		translate.addLangs(["en-ca", "fr-ca"]);
 
-		const browserLang = translateCacheService.getCachedLanguage() || translate.getBrowserLang();
+		const browserLang = /* translateCacheService.getCachedLanguage() || */ translate.getBrowserLang();
 
 		translate.use(browserLang.match(/en-ca|fr-ca/) ? browserLang: "en-ca");
 	}
@@ -50,7 +50,7 @@ export function translateLoaderFactory(httpClient: HttpClient)
 	return new TranslateHttpLoader(httpClient);
 }
 
-export function translateCacheFactory(translateService: TranslateService, translateCacheSettings: TranslateCacheSettings)
+/* export function translateCacheFactory(translateService: TranslateService, translateCacheSettings: TranslateCacheSettings)
 {
 	return new TranslateCacheService(translateService, translateCacheSettings);
-}
+} */
