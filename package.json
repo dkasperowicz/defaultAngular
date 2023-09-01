@@ -22,7 +22,7 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^4.0.0",
     "ngx-translate-cache": "^0.1.1",
-    "rxjs": "~6.5.4",
+    "rxjs": "~6.6.7",
     "tslib": "^1.11.0",
     "zone.js": "~0.10.3"
   },
