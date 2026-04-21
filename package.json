@@ -24,7 +24,7 @@
     "ngx-translate-cache": "^20.0.0",
     "rxjs": "~7.8.2",
     "tslib": "^2.6.2",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.16.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^21.2.5",
