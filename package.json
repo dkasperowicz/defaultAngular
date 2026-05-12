@@ -30,7 +30,7 @@
     "@angular-devkit/build-angular": "^21.2.5",
     "@angular/cli": "^21.2.8",
     "@angular/compiler-cli": "~21.2.8",
-    "@angular/language-service": "~21.2.11",
+    "@angular/language-service": "~21.2.12",
     "@types/jasminewd2": "~2.0.13",
     "@types/jasmine": "~6.0.0",
     "@types/node": "~20.10.3",
