@@ -16,7 +16,7 @@
     "@angular/compiler": "~22.0.0",
     "@angular/core": "~21.2.15",
     "@angular/forms": "~22.0.0",
-    "@angular/platform-browser": "~21.2.14",
+    "@angular/platform-browser": "~22.0.0",
     "@angular/platform-browser-dynamic": "~21.2.13",
     "@angular/router": "~22.0.0",
     "@ngx-translate/core": "^17.0.0",
